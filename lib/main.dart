@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_boilerplate/styles/app_theme.dart';
 import 'package:provider/provider.dart';
-
 import './shared/providers/name_notifier.dart';
 import './routes.dart';
 import './modules/auth/auth_screen.dart';
@@ -20,11 +20,13 @@ class MyApp extends StatelessWidget {
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
-          theme: ThemeData(
-            primarySwatch: Colors.blue,
-          ),
+          theme: AppTheme.lightTheme,
+          darkTheme: AppTheme.darkTheme,
           routes: Routes.routes,
           home: AuthScreen(),
         ));
+
+
+        
   }
 }
